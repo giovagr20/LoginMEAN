@@ -1,16 +1,16 @@
 {
-  "name": "loginmean",
+  "name": "loginmeanapp",
   "version": "1.0.0",
-  "description": "App for login using nodejs and angular apis communication",
+  "description": "App for login nodejs, angular, apirest",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon backend/index.js"
+    "dev": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/giovagr20/LoginMEAN.git"
   },
-  "author": "Giovanni Gomez Restrepo",
+  "author": "Giovanni Gomez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/giovagr20/LoginMEAN/issues"
@@ -22,8 +22,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.7.7",
-    "morgan": "^1.9.1"
+    "mongoose": "^5.7.7"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
