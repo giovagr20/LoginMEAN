@@ -1,13 +1,15 @@
 const mongoose = require('mongoose');
 const authSchema = require('./auth.model');
-const URI = 'mongodb://localhost/LoginMEAN';
+
 
 authSchema.statics = {
-    create: (data, cb)=>{
+    create: function(data, cb)
+    {
         const user = new this(data)
         user.save(cb);
     },
-    login: (query, cb)=>{
+    login: function(query, cb)//function oculta
+    {
         this.find(query, cb);
     }
 }

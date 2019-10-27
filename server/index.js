@@ -10,6 +10,10 @@ DB();
 
 authRoutes(router);
 
+//middleware
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
 //SERVER RUN
 router.get('/', (req, res)=>{
     res.send('HI');

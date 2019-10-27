@@ -31,6 +31,7 @@ exports.loginUser = (req, res, next)=>{
     }
     User.findOne({email: userData.email}, (err, user)=>{
         if (err) return res.status(500).send('Server error');
+
         if(!user){
             //email doesnt exist
             res.status(450).send({message: 'Something is wrong'});
@@ -39,7 +40,7 @@ exports.loginUser = (req, res, next)=>{
             if(resultPassword){
                 const expiresIn = 24*60*60;
                 const accessToken = jwt.sign({id: user.id}, SECRET_KEY, {expiresIn: expiresIn});
-                res.send(userData);
+                res.send({userData});
             }else{
                 // password incorrect
                 res.status(450).send({message: 'Something is wrong'});   
