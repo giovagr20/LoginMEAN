@@ -1,4 +1,4 @@
-export interface IJwtResponse {
+export interface JwtResponseI {
     dataUser:{
         id: number,
         name: string,
