@@ -18,7 +18,9 @@ app.use(cors());
 
 //SERVER RUN
 router.get('/', (req, res)=>{
-    res.send('HI');
+    res.json({
+        message: "Welcome to app"
+    });
 });
 
 app.use(router);
