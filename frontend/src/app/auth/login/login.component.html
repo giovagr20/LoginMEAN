@@ -24,3 +24,25 @@
             </div>
 
 </div>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">Login</h2>
+        </div>
+        <div class="card-body">
+            <form #frmLogin="ngForm" class="" (ngSubmit)="onLogin(frmLogin)">
+                    <input type="email" name="email" placeholder="Email" ngModel required><hr>
+                    <input type="password" name="password" placeholder="Password" ngModel required><hr>
+                    <a href="/auth/register">Create an account</a>
+                    <br>
+                    <button type="submit" class="btn btn-danger">Send</button>
+                    
+
+            </form>
+        </div>
+    </div>
+
+
+
+</div>
